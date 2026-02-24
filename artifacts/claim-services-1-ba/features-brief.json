@@ -1,0 +1,110 @@
+[
+  {
+    "id": "policy-mgmt",
+    "name": "Policy Management",
+    "description": "Full policy lifecycle: quote, bind, issue, endorse, renew, cancel. Supports multi-criteria search (Policy Number, Insured Name, SSN/TIN, Policy Type, Address, Loss Date), policy detail view with vehicle/coverage/location details, WCAG-compliant UI, and SSN/TIN masking.",
+    "priority": "high"
+  },
+  {
+    "id": "claim-processing",
+    "name": "Claim Processing",
+    "description": "End-to-end claim lifecycle from FNOL through investigation, adjustment, settlement, denial, and close. Includes claim search, claim history per policy, claim reopening, subrogation referral, injury incident details, ICD/CPT coding, and carrier involvement tracking.",
+    "priority": "high"
+  },
+  {
+    "id": "underwriting",
+    "name": "Underwriting Engine",
+    "description": "Risk assessment and premium calculation using rating factors (territory, risk, coverage), eligibility checking, automated underwriting thresholds, and re-rating on endorsements. Supports multi-policy and claims-free discounts.",
+    "priority": "high"
+  },
+  {
+    "id": "coverage-mgmt",
+    "name": "Coverage Management",
+    "description": "Coverage types (LIABILITY, COLLISION, COMPREHENSIVE, MEDICAL_PAYMENTS, UNINSURED_MOTORIST, PROPERTY_DAMAGE, BODILY_INJURY, UMBRELLA), per-coverage limits and deductibles, aggregate limit enforcement, and coverage add/remove via endorsement.",
+    "priority": "high"
+  },
+  {
+    "id": "insured-mgmt",
+    "name": "Insured Management",
+    "description": "Individual and organization insured profiles with SSN/TIN encryption and masking, contact and address information, and linkage to policies and claims.",
+    "priority": "high"
+  },
+  {
+    "id": "payments-disbursements",
+    "name": "Payments & Disbursements",
+    "description": "Full payment lifecycle (create, void, reverse, reissue) across methods: ACH, Wire, Credit/Debit Card, Stripe Connect, Global Payouts. Supports positive/negative/zero amounts, joint payees, eroding/non-eroding designation, reserve allocation, tax withholding, 1099 reporting, document attachment, and idempotent processing.",
+    "priority": "high"
+  },
+  {
+    "id": "payee-onboarding",
+    "name": "Payee Onboarding & KYC",
+    "description": "Secure onboarding of vendors, claimants, attorneys, and medical providers with KYC identity verification, payment method verification, onboarding status tracking (PENDING, VERIFIED, REJECTED, SUSPENDED), and PCI-DSS compliant banking data encryption.",
+    "priority": "high"
+  },
+  {
+    "id": "reserve-mgmt",
+    "name": "Reserve Management",
+    "description": "Multiple reserve lines per claim (Medical, Indemnity, Expense, Legal), reserve creation and adjustment with reason codes, real-time balance tracking, allocation of payments across reserve lines, and eroding/non-eroding reserve designation.",
+    "priority": "high"
+  },
+  {
+    "id": "claim-level-policy-override",
+    "name": "Claim-Level Policy Data Override",
+    "description": "Ability to add or edit policy information at the claim level when the associated policy is unverified. Changes stored separately without overwriting original policy data; visual indicator shown; all changes audit-logged.",
+    "priority": "high"
+  },
+  {
+    "id": "endorsement",
+    "name": "Policy Endorsement",
+    "description": "Mid-term policy modifications (add/remove coverage, change limits/deductibles, add/remove vehicles, address changes) with automatic premium re-rating, endorsement number generation (END-YYYY-NNNNNN), and endorsement history on policy record.",
+    "priority": "high"
+  },
+  {
+    "id": "medical-payments-edi",
+    "name": "EDI/EOB Medical Payments",
+    "description": "EDI 837 ingestion for medical claim submissions, EDI 835 remittance advice generation, CPT/ICD code mapping and validation, bill review vendor integration, EOB output generation, and adjustment reason code capture.",
+    "priority": "medium"
+  },
+  {
+    "id": "estimate-import",
+    "name": "Estimate Import (Xactimate/XactAnalysis)",
+    "description": "Automated creation of payable line items from property damage estimates imported from Xactimate/XactAnalysis. Line-item review/approval workflow before payment creation; coverage limit validation.",
+    "priority": "medium"
+  },
+  {
+    "id": "negotiation-settlement",
+    "name": "Negotiation & Settlement Management",
+    "description": "Negotiation workflow tracking (opening demand, counter-offers, final settlement), coverage opinion request management, settlement plan creation with structured payment schedules, and signed agreement status tracking.",
+    "priority": "medium"
+  },
+  {
+    "id": "payment-routing",
+    "name": "Payment Routing Rules",
+    "description": "Configuration of payment routing rules based on payee type, payment type, and business rules. Admin-configurable without code changes, applied automatically during payment creation.",
+    "priority": "medium"
+  },
+  {
+    "id": "subrogation",
+    "name": "Subrogation Management",
+    "description": "Referral of settled/closed claims to subrogation team, capture of responsible third-party and other carrier information (carrier name, policy number, coverage details), recovery amount tracking, and integration across claim functions and payments.",
+    "priority": "medium"
+  },
+  {
+    "id": "audit-trail",
+    "name": "Audit Trail",
+    "description": "Immutable, comprehensive audit log for all user actions across Policy, Claims, and Payments modules. Captures user_id, action_type, entity_type, entity_id, timestamp, before/after state (JSON). Retained 7 years. Searchable by authorized compliance roles.",
+    "priority": "high"
+  },
+  {
+    "id": "rbac",
+    "name": "Role-Based Access Control",
+    "description": "Enforcement of RBAC across all modules with roles: Agent, Underwriter, Claims Adjuster, Claims Manager, Payment Processor, Admin. Per-role permissions for read/write/approve actions. MFA for payment-enabled roles.",
+    "priority": "high"
+  },
+  {
+    "id": "reporting",
+    "name": "Insurance Reporting",
+    "description": "Annual premium reports and claims reports for regulatory filing, loss ratio calculations, 1099 tax reporting for reportable payees, and payment/reserve financial reports for General Ledger reconciliation.",
+    "priority": "medium"
+  }
+]

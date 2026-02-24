@@ -1,0 +1,67 @@
+**Agent:** `claim-services-1-ba` | **Phase:** `ba` | **Tech Stack:** `insurance-python-greenfield`
+
+**Model:** `claude-sonnet-4-6` | **Budget:** $`2.00` | **Max Turns:** `20` | **Tools:** `9`
+
+### Skill: `smart-ba-insurance`
+> SmartBA for Insurance (ACORD) — Business Analyst agent with insurance domain expertise. Uses ACORD terminology, insurance business rules, regulatory requirements, and actuarial concepts.
+
+**Sections:** Phase Role: SmartBA — Insurance Domain (ACORD), Prior Work, CRITICAL: File Path Rules, Step-by-Step Requirements Elicitation, Output — Write EXACTLY these 2 files, ABSOLUTE RULES
+
+**Key Rules:**
+1. **Every user story MUST have Priority (High/Medium/Low) and Story Points (Fibonacci: 1,2,3,5,8,13)**
+2. **Use ACORD terminology consistently** — Policy, Claim, Coverage, Premium, Endorsement, FNOL, Underwriting
+3. **Include policy and claim lifecycle state machines** — complete state transitions
+4. **Premium calculation rules are MANDATORY** — even simplified, must be documented
+5. **Every user story MUST have error scenarios** — insurance has many edge cases
+*...and 5 more*
+
+**References:** `acord-domain-knowledge.md`, `acord-domain-model.md`
+
+
+---
+
+> **Bash** `Check existing artifacts`
+
+> **Bash** `Check references directory`
+
+> **Bash** `Check existing BA artifacts`
+
+> **Update Todos** Create requirements.md with full ACORD-c, Create features-brief.json with feature 
+
+> **Write** `artifacts/claim-services-1-ba/requirements.md`
+
+> **Update Todos** Create requirements.md with full ACORD-c, Create features-brief.json with feature 
+
+> **Write** `artifacts/claim-services-1-ba/features-brief.json`
+
+> **Update Todos** Create requirements.md with full ACORD-c, Create features-brief.json with feature 
+
+Both files have been created:
+
+---
+
+### Deliverables
+
+**`artifacts/claim-services-1-ba/requirements.md`** — 22 user stories covering all BRD functional areas:
+- **US-001–002**: RBAC and audit logging
+- **US-003–007**: Policy search, detail, creation, endorsement, cancellation
+- **US-008–014**: Claim search, FNOL, adjudication, claim-level overrides, subrogation, injury/coding
+- **US-015–022**: Scheduled payments, payment processing, void/reversal/reissue, payee KYC, estimate import, EDI 835/837, negotiation/settlement, reserve management
+
+Each story includes Priority/Story Points (Fibonacci), ACORD-numbered Acceptance Criteria, and Error Scenarios.
+
+Business rules fully numbered: **POL-001–012**, **COV-001–006**, **PRM-001–006**, **CLM-001–012**, **PAY-001–012**
+
+Both lifecycle state machines (Policy and Claim) documented with complete transitions.
+
+Complete ACORD domain model covers: Insured, Policy, Coverage, Premium, Endorsement, Vehicle, Claim, ClaimLevelPolicyData, Reserve, Payment, PaymentDetail, Payee, AuditLog.
+
+NFRs cover performance (3s search, 5s detail, 2s premium calc), security (PCI-DSS, AES-256, RBAC, MFA), regulatory (7-year retention, 30-day notice, WCAG 2.1 AA, EDI), and reliability (99.9% uptime, idempotency).
+
+All 13 integrations documented with direction and error-handling requirements.
+
+**`artifacts/claim-services-1-ba/features-brief.json`** — 18 features with id, name, description, and priority reflecting the full platform scope.
+
+---
+
+**Completed** in 9 turns (cost: $0.3037)
